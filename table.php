@@ -5,7 +5,9 @@
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/public/css/bootstrap.css">
     <link rel="stylesheet" href="/public/css/style.css">
-    <title>INFO</title>
+
+    <script src="/public/js/bootstrap.js"></script>
+    <title>TABLE 1</title>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -24,45 +26,52 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-
                 <li><a href="/24april.html"><span class="glyphicon glyphicon-header" aria-hidden="true"></span> Home</a></li>
-                <li class="active"><a><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info</a></li>
-                <li><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
+                <li><a><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info</a></li>
+                <li class="active"><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
                 <li><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
+
             </ul>
-<!--            <ul class="nav navbar-nav navbar-right">-->
-<!--                <li class="active"><a>Info</a></li>-->
-<!--            </ul>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+            <!--<li class="active"><a>Info</a></li>-->
+            <!--</ul>-->
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
 
 <div class="container">
-    <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading"> <?php
-            echo "ФИО: " . $_POST[fio];
+<!--    --><?php
+//        $cols = 10;
+//        $rows = 10;
+//        $cols1 = 1;
+//        echo '<table class="table table-bordered">';
+//            while($cols1<$cols){
+//            $rows1 = 1;
+//            echo '<tr>';
+//                while($rows1<$rows){
+//                $rez = $cols1*$rows1;
+//                echo '<td>'.$rez. ' '.' </td>';
+//                $rows1++;
+//                }
+//                echo '<br />';
+//                echo '</tr>';
+//                $cols1++;
+//            }
+//            echo '</table>';
+//    ?>
+    <table class="table table-bordered">
+        <tr>
+            <?php
+            for($i=0; $i<10; $i++){
+                echo "<td>";
+                for($j=0; $j<10; $j++){
+                    echo "  " .$i . "*" . $j . "=" . ($i*$j) . "</br>";
+                }
+                echo "</td>";
+            }
             ?>
-        </div>
-
-        <!-- List group -->
-        <ul class="list-group">
-            <li class="list-group-item">
-                <?php
-                echo "Факультет: " . $_POST[fak];
-                ?>
-            </li>
-            <li class="list-group-item">
-                <?php
-                echo "Специальность: " . $_POST[spec];
-                ?>
-            </li>
-        </ul>
-    </div>
-
-
-
-
+        </tr>
+    </table>
 </div>
 <!--</content>-->
 <footer>

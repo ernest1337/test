@@ -14,7 +14,7 @@ nav li {
 }
 
 .top-menu a {
-    color: darkslategray;
+    color: mediumturquoise;
 }
 #left-content{
     display: inline-block;
@@ -29,11 +29,12 @@ nav li {
 footer {
     position: absolute;
     bottom: 0;
-    color: #31708f;
-    font-size: 11px;
-    margin: auto;
-    padding: 10px 0;
-    height: 90px;
+    color: #000000;
+    font-size: 12px;
+    margin-top: -50px;
+    padding: 10px 10px;
+    height: 30px;
+    width: 100%;
 }
 .navbar-header img{
     height: 70px;
@@ -55,6 +56,22 @@ img:hover
 .btn-danger {
     margin-left: 7px;
 }
-footer{
-    height: 30px;
+body{
+    background-color: #f7f7f7;
+    color: #3b5998;
+}
+.navbar-default{
+    background-color: #dfe3ee;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #3b5998;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #9acfea;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #000000;
+}
+.panel-default > .panel-heading{
+    color: #3b5998;
 }

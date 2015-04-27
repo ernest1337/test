@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/public/css/bootstrap.css">
     <link rel="stylesheet" href="/public/css/style.css">
-    <title>Website</title>
+    <title>HOME</title>
 </head>
-<body style="background-color: lavender">
+<body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -17,17 +18,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img src="http://gloria-project.eu/wp-content/uploads/2012/06/logo-256-transp.png">
+            <a href="/24april.html"><img src="http://gloria-project.eu/wp-content/uploads/2012/06/logo-256-transp.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Lesson 1<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
+                <li class="active"><a href="/24april.html"><span class="glyphicon glyphicon-header" aria-hidden="true"></span> Home</a></li>
+                <li><a><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info</a></li>
+                <li><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
+                <li><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
+
             </ul>
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li class="active"><a>Home</a></li>-->
+            <!--</ul>-->
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
@@ -35,30 +40,42 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                    <table class="table table-hover">
+                    <table class="table table-hover">   <!--ТАБЛИЦА СО СТУДЕНТАМИ-->
                         <tr>
-                            <th>FIO</th>
-                            <th>FAK</th>
-                            <th>SPEC</th>
-                            <th>KURS</th>
+                            <th>ФИО</th>
+                            <th>ФАК</th>
+                            <th>СПЕЦ</th>
+                            <th>КУРС</th>
                         </tr>
                         <tr>
-                            <td>Ivanov Ivan Ivanovich</td>
-                            <td>MLD</td>
-                            <td>ODK</td>
+                            <td>Иванов Иван Иванович</td>
+                            <td>АОУ</td>
+                            <td>ОТУ</td>
                             <td>2</td>
                         </tr>
                         <tr>
-                            <td>Petrov Petr Petrovich</td>
-                            <td>SAF</td>
-                            <td>GEW</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Kornilov Kirill Kirillovich</td>
-                            <td>BSD</td>
-                            <td>DSG</td>
+                            <td>Петров Пётр Петрович</td>
+                            <td>ДСИ</td>
+                            <td>БТУ</td>
                             <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Смирнов Олег Владимирович</td>
+                            <td>ШДТ</td>
+                            <td>ФАР</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Котов Дмитрий Игоревич</td>
+                            <td>КЕТ</td>
+                            <td>ОТТ</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Соколов Михаил Витальевич</td>
+                            <td>ГКХ</td>
+                            <td>ТМР</td>
+                            <td>3</td>
                         </tr>
                     </table>
                 </div>
@@ -90,12 +107,12 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div><!--ФОРМА ДЛЯ ЗАПОЛНЕНИЯ-->
                 </div>
             </div>
     <!--</content>-->
     <footer>
-        <a href="http://vk.com/ernieisonfire">Copyrights reserved (c)</a>
+        <a href="http://vk.com/ernieisonfire"><center>Copyrights reserved ©</center></a>
     </footer>
 
 </body>
