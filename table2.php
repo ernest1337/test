@@ -30,7 +30,7 @@
                 <li><a><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info</a></li>
                 <li><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
                 <li class="active"><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
-
+                <li><a href="forma.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Form</a></li>
             </ul>
             <!--<ul class="nav navbar-nav navbar-right">-->
             <!--<li class="active"><a>Info</a></li>-->
@@ -43,21 +43,22 @@
     <?php
     $stolb = 10;
     $strok = 10;
-    $stolb1 = 1;
+//    $stolb1 = 1;
     echo '<table class="table table-bordered">';
-    while($stolb1<=$stolb){
-        $strok1 = 1;
+    for($stolb1=1; $stolb1<10; $stolb1++){
+//        $strok1 = 1;
         echo '<tr>';
-        while($strok1<=$strok){
+        for($strok1=1; $strok1<10; $strok1++){
             $rez = $stolb1*$strok1;
-            echo '<td>'.$rez. ' '.' </td>';
-            $strok1++;
+            $color= ($strok1==$stolb1)?'style="background-color: red;"':'';
+                echo "<td ".$color.">" . $rez . ' ' . ' </td>';
+
         }
         echo '<br />';
         echo '</tr>';
 
 
-        $stolb1++;
+//        $stolb1++;
     }
     echo '</table>';
     ?>

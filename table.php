@@ -30,7 +30,7 @@
                 <li><a><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info</a></li>
                 <li class="active"><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
                 <li><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
-
+                <li><a href="forma.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Form</a></li>
             </ul>
             <!--<ul class="nav navbar-nav navbar-right">-->
             <!--<li class="active"><a>Info</a></li>-->
@@ -49,7 +49,11 @@
                 for($j=1; $j<=10; $j++){
                     echo "  " .$i . "*" . $j . "=" . ($i*$j) . "</br>";
                 }
+                if ($i==5){
+                    echo "</br>";
+                }
                 echo "</td>";
+
             }
             ?>
         </tr>
