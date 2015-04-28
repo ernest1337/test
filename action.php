@@ -57,6 +57,16 @@
                 echo "Специальность: " . $_POST[spec];
                 ?>
             </li>
+            <li class="list-group-item">
+                <?php
+                echo "Курс: " . $_POST[kurs];
+                ?>
+            </li>
+            <li class="list-group-item">
+                <?php
+                    echo date('<p> Время : l jS \of F Y h:i:s A .</p>')
+                 ?>
+            </li>
         </ul>
     </div>
 

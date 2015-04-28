@@ -40,31 +40,13 @@
 </nav>
 
 <div class="container">
-<!--    --><?php
-//        $cols = 10;
-//        $rows = 10;
-//        $cols1 = 1;
-//        echo '<table class="table table-bordered">';
-//            while($cols1<$cols){
-//            $rows1 = 1;
-//            echo '<tr>';
-//                while($rows1<$rows){
-//                $rez = $cols1*$rows1;
-//                echo '<td>'.$rez. ' '.' </td>';
-//                $rows1++;
-//                }
-//                echo '<br />';
-//                echo '</tr>';
-//                $cols1++;
-//            }
-//            echo '</table>';
-//    ?>
+
     <table class="table table-bordered">
         <tr>
             <?php
-            for($i=0; $i<10; $i++){
+            for($i=1; $i<=10; $i++){
                 echo "<td>";
-                for($j=0; $j<10; $j++){
+                for($j=1; $j<=10; $j++){
                     echo "  " .$i . "*" . $j . "=" . ($i*$j) . "</br>";
                 }
                 echo "</td>";

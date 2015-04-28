@@ -75,3 +75,6 @@ body{
 .panel-default > .panel-heading{
     color: #3b5998;
 }
+select{
+    margin-left: 200px;
+}

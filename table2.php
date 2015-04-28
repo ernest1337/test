@@ -41,23 +41,23 @@
 
 <div class="container">
     <?php
-    $cols = 10;
-    $rows = 10;
-    $cols1 = 1;
+    $stolb = 10;
+    $strok = 10;
+    $stolb1 = 1;
     echo '<table class="table table-bordered">';
-    while($cols1<$cols){
-        $rows1 = 1;
+    while($stolb1<=$stolb){
+        $strok1 = 1;
         echo '<tr>';
-        while($rows1<$rows){
-            $rez = $cols1*$rows1;
+        while($strok1<=$strok){
+            $rez = $stolb1*$strok1;
             echo '<td>'.$rez. ' '.' </td>';
-            $rows1++;
+            $strok1++;
         }
         echo '<br />';
         echo '</tr>';
 
 
-        $cols1++;
+        $stolb1++;
     }
     echo '</table>';
     ?>
