@@ -21,8 +21,8 @@
         var_dump($array);
         echo "</pre>";
 //        for($i=0; $i<count($Arr); $i++){
-    //СПОСОБ 1
-        function VD($array)
+    //WAY 1
+        function vd($array)
         {
 //            foreach($array as $key){
 //                echo gettype($key) . " (";
@@ -35,8 +35,8 @@
 //                }
 //            }
 //         }
-            //КОНЕЦ СПОСОБА
-            //СПОСОБ2
+            //END OF WAY 1
+            //WAY 2
             echo "<pre>";
             echo gettype($array) . " (" . count($array) . ") {". "<br>";
             for ($i = 0; $i < count($array); $i++) {
@@ -44,16 +44,16 @@
                 echo " [" . $i . "] "  .  "  " . "=> " . gettype($array[$i]);
                 if (gettype($array[$i])=='array') {
                     echo   "<br>";
-                    VD($array[$i]) . '</br>';
+                    vd($array[$i]) . '</br>';
                 } else {
                     echo    " (" . $array[$i] . ")" . " " . "</br>";
                 }
             }
             echo "</pre>";
         }
-    //КОНЕЦ СПОСОБА2
+    //END OF WAY 2
 
-        VD($array);
+        vd($array);
     ?>
 
 
