@@ -42,7 +42,13 @@
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading"> <?php
-            echo "ФИО: " . $_POST[fio];
+            $nameProverka= ( ! preg_match('/[а-я\s]/i', $_POST['fio'])) ? FALSE : TRUE;
+                if($nameProverka) {
+                    echo "Имя: " . $_POST['fio'];
+                }
+                else{
+                    echo "Ошибка";
+                }
             ?>
         </div>
 
@@ -50,12 +56,23 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <?php
-                echo "Факультет: " . $_POST[fak];
+//                if (gettype($_POST['voz']=='int') and $_POST['voz']>15){
+                if(filter_var($_POST['voz'],FILTER_VALIDATE_INT) and $_POST['voz']>15 and $_POST['voz']<50) {
+                    echo "Возраст: " . $_POST['voz'];
+                }
+                else{
+                    echo "ВНИМАНИЕ: Вы неправильно указали возраст";
+                }
                 ?>
             </li>
             <li class="list-group-item">
                 <?php
-                echo "Специальность: " . $_POST[spec];
+                echo "Факультет: " . $_POST['fak'];
+                ?>
+            </li>
+            <li class="list-group-item">
+                <?php
+                echo "Специальность: " . $_POST['spec'];
                 ?>
             </li>
             <li class="list-group-item">
