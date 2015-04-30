@@ -24,11 +24,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/24april.html"><span class="glyphicon glyphicon-header" aria-hidden="true"></span> Home</a></li>
+                <li><a href="/24april.html"><span class="glyphicon glyphicon-header" aria-hidden="true"></span> Home</a></li>
                 <li><a><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info</a></li>
                 <li><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
                 <li><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
-                <li><a href="forma.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Form</a></li>
+                <li  class="active"><a href="forma.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Form</a></li>
             </ul>
             <!--<ul class="nav navbar-nav navbar-right">-->
             <!--<li class="active"><a>Home</a></li>-->
@@ -53,6 +53,12 @@
                 </div>
             </div>
             <div>
+                <label for="vydel">Выделить ячейки</label>
+                <div>
+                    <input type="text" name="vydel"  placeholder=" Строка,Столбик;">
+                </div>
+            </div>
+            <div>
                 <label for="col">Цвет</label>
                 <select name="col">
                     <option>Coral
@@ -68,6 +74,10 @@
                 </label>
             </div>
             <div>
+                <label>
+                    <input type="radio" name="diag" value="option3">
+                    Выбрать точки
+                </label>
                 <label>
                     <input type="radio" name="diag" value="option1">
                     Диагонально
