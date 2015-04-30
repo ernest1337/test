@@ -16,14 +16,14 @@
 
 <div class="container">
     <?php
-        $array=array(1, 2, array(array("z", "x"), "b", "c"), array("d", "e", "f"), 5);
+        $array=array(1, 2, array("z", "x"), 3);
         echo "<pre>";
         var_dump($array);
         echo "</pre>";
 //        for($i=0; $i<count($Arr); $i++){
     //WAY 1
-        function vd($array)
-        {
+        function vd($array){
+            echo "<pre>";
 //            foreach($array as $key){
 //                echo gettype($key) . " (";
 //                if (gettype($key)=='array'){
@@ -37,21 +37,23 @@
 //         }
             //END OF WAY 1
             //WAY 2
-            echo "<pre>";
-            echo gettype($array) . " (" . count($array) . ") {". "<br>";
-            for ($i = 0; $i < count($array); $i++) {
-//                $prov = is_array($array[$i]);
-                echo " [" . $i . "] "  .  "  " . "=> " . gettype($array[$i]);
-                if (gettype($array[$i])=='array') {
-                    echo   "<br>";
-                    vd($array[$i]) . '</br>';
-                } else {
-                    echo    " (" . $array[$i] . ")" . " " . "</br>";
+            echo gettype($array) . "(" . count($array) . ") {". "<br>";
+            foreach($array as $key =>$value)
+            {
+                echo  " [". $key  . "] => </br>";
+                if(gettype($value)=='array') {
+
+                    echo "<br>";
+                    vd($array[$key]);
+                }else{
+                    echo  gettype($value) . "(" . $value .  ")  "."</br>";
                 }
             }
-            echo "</pre>";
-        }
+            echo "</pre";
+            }
     //END OF WAY 2
+
+
 
         vd($array);
     ?>
