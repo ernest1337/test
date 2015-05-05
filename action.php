@@ -18,7 +18,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/24april.html"><img src="http://gloria-project.eu/wp-content/uploads/2012/06/logo-256-transp.png"></a>
+            <a href="/24april.html"><img src="http://files.pokefans.net/sprites/xy/007.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,11 +43,19 @@
         <!-- Default panel contents -->
         <div class="panel-heading"> <?php
             $nameProverka= ( ! preg_match('/[а-я\s]/i', $_POST['fio'])) ? FALSE : TRUE;
-                if($nameProverka) {
+            $nameProverka2= ( ! preg_match('/[a-zA-Z\W]/i', $_POST['fio'])) ? TRUE : FALSE;
+
+//            $nameProverka3= (  preg_match('/[^а-яА-Я]/', $_POST['fio']));
+//            $nameProverka3=(!preg_match("/^[".chr(0x7F)."-".chr(0xff)."_-]+$/",$_POST['fio']));
+            $nameProverka3=(preg_match('/^[а-яёА-ЯЁ\s]+$/', $_POST['fio']));
+            var_dump($nameProverka3);
+//            $nameProverka= ( ! preg_match("/^([а-яА-я])+$/i", $_POST['fio'])) ? FALSE : TRUE;
+//                if($nameProverka and $nameProverka2) {
+                if($nameProverka3) {
                     echo "Имя: " . $_POST['fio'];
                 }
                 else{
-                    echo "Ошибка";
+                    echo "ВНИМАНИЕ!! Пожалуйста, введите своё имя на русском";
                 }
             ?>
         </div>
@@ -61,7 +69,7 @@
                     echo "Возраст: " . $_POST['voz'];
                 }
                 else{
-                    echo "ВНИМАНИЕ: Вы неправильно указали возраст";
+                    echo "ВНИМАНИЕ!! Вы неправильно указали возраст";
                 }
                 ?>
             </li>

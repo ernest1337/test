@@ -20,7 +20,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/24april.html"><img src="http://gloria-project.eu/wp-content/uploads/2012/06/logo-256-transp.png"></a>
+            <a href="/24april.html"><img src="http://files.pokefans.net/sprites/xy/007.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
