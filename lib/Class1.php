@@ -33,28 +33,4 @@ class Class1 {
         }
         return $newArray;
     }
-
-    public function Func($str){
-
-//        echo "Предложение: " . "<b>" .$str . "</b>" . "<br>";
-//        $keywords = preg_split("/[\s,!?.:-]+/",$str);//переводит предложение в массив, убирая знаки
-//        $count = count($keywords);
-
-
-//        echo "Общее кол-во слов: " . "<b>" . ($count) . "</b>" . "<br>";
-//        $newArray = array();
-//        foreach ($keywords as $key => $value) {
-//            $num = (strlen(iconv('UTF-8', 'windows-1251', $value)));
-//            if ($num) {
-//                $newArray[$num][] = $value;
-//            }
-//        }
-//        ksort($newArray);
-//        foreach ($newArray as $key => $value) {
-//            echo "<br>" . "Все слова, состоящие из " . "<b>" . $key . "</b>" . " букв: " . "<b>" . count($value) . "</b>" . 'шт - ' . implode(", ", $value);
-//            "</br>";
-//        }
-//        return $newArray;
-    }
-
 }
