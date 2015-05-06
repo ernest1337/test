@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/public/css/bootstrap.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/table1.css">
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
     <script src="/public/js/bootstrap.js"></script>
     <title>TABLE 3</title>
 </head>

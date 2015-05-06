@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/public/css/bootstrap.css">
     <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
     <title>INFO</title>
 </head>
 <body>
@@ -30,6 +31,7 @@
                 <li><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
                 <li><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
                 <li><a href="forma.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Form</a></li>
+                <li><a href="words.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Sentence</a></li>
             </ul>
 <!--            <ul class="nav navbar-nav navbar-right">-->
 <!--                <li class="active"><a>Info</a></li>-->
@@ -48,7 +50,7 @@
 //            $nameProverka3= (  preg_match('/[^а-яА-Я]/', $_POST['fio']));
 //            $nameProverka3=(!preg_match("/^[".chr(0x7F)."-".chr(0xff)."_-]+$/",$_POST['fio']));
             $nameProverka3=(preg_match('/^[а-яёА-ЯЁ\s]+$/', $_POST['fio']));
-            var_dump($nameProverka3);
+//            var_dump($nameProverka3);
 //            $nameProverka= ( ! preg_match("/^([а-яА-я])+$/i", $_POST['fio'])) ? FALSE : TRUE;
 //                if($nameProverka and $nameProverka2) {
                 if($nameProverka3) {
