@@ -26,12 +26,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/24april.html"><span class="glyphicon glyphicon-header" aria-hidden="true"></span> Home</a></li>
+                <li><a href="/24april.html"><span class="glyphicon glyphicon-header" aria-hidden="true"></span> Home</a></li>
                 <li><a><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info</a></li>
                 <li><a href="table.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table</a></li>
                 <li><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
                 <li><a href="forma.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Form</a></li>
                 <li><a href="words.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Sentence</a></li>
+                <li class="active"><a href="stoimost_okna.php"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Okna</a></li>
             </ul>
             <!--<ul class="nav navbar-nav navbar-right">-->
             <!--<li class="active"><a>Home</a></li>-->
@@ -45,6 +46,10 @@
         <?php
         include("lib/class_okna.php");
         include("okna.php");
+        include("lib/valid.php");
+
+
+
         $vys=$_POST['vys'];
         $shyr=$_POST['shir'];
         $profi=$_POST['profil'];
@@ -52,16 +57,44 @@
         $stek=$_POST['stek'];
         $pov=$_POST['pov'];
         $arr=$povoroty[$pov];
-        $exz=new class_okna();
-        $ploshad=$exz->place($vys,$shyr);
+        $type=$_POST['type'];
+        $arr2=$typ[$type];
+
+
+//        $exz=new class_okna();
+//        $ploshad=$exz->place($vys,$shyr);
+
+        $exz=new oknaPlast();
 
 
 
-        $stoim=$exz->summa($ploshad,$stek,$arr1,$arr);
 
-        echo "Площадь окна: " . $ploshad . " м&#178;".'<br>' . "Цвет профиля: " . $profi .'<br>' ;
-        echo "Стоимость: " . $stoim . " грн";
+        $exz->createWindow($vys,$shyr,$stek,$arr1,$arr);
 
+        $oknaCal = new class_okna_cal();
+        $exz->plosh = $oknaCal->place($exz);
+        $exz->sum =$oknaCal->summa($exz);
+
+        $ploshad = $exz->plosh;
+        $stoim = $exz->sum;
+
+
+//        if ($valid::Validation($vys, $shyr))
+//        {
+
+            echo "Площадь окна: " . $ploshad . " м&#178;" . '<br>' . "Цвет профиля: " . $profi . '<br>';
+            echo "Стоимость: " . $stoim . " грн" . '<br>'. '<br>'. '<br>' ;
+//        }
+//        else{
+//            echo "Error";
+//        }
+
+        $inf=$oknaCal->createArr($exz);
+
+        echo "Инфа о Вашем окне: ";
+        foreach($inf as $i){
+            echo $i . ",  ";
+        }
         ?>
 
 

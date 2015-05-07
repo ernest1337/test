@@ -33,6 +33,7 @@
                 <li class="active"><a href="table2.php"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Table 2</a></li>
                 <li><a href="forma.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Form</a></li>
                 <li><a href="words.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Sentence</a></li>
+                <li><a href="k_oplate.php"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Okna</a></li>
             </ul>
             <!--<ul class="nav navbar-nav navbar-right">-->
             <!--<li class="active"><a>Info</a></li>-->
@@ -56,7 +57,7 @@
                 echo "<td ".$color.">" . $rez . ' ' . ' </td>';
 
         }
-        echo '<br />';
+        echo '<br>';
         echo '</tr>';
 
 
